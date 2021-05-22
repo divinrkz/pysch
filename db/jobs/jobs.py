@@ -1,7 +1,7 @@
 from db.mongo import db
 import datetime
 from db.enum import EStatus
-from db.util import Utility
+from db.utils.util import Utility
 
 
 record = {
