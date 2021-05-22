@@ -1,4 +1,4 @@
-from .scheduler.scheduler import Schedule
+from scheduler.scheduler import Schedule
 
 schedule = Schedule()
 schedule.start()
