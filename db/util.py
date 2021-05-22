@@ -9,3 +9,4 @@ class Utility:
             code += str(randint(0, 10))
 
         return code
+

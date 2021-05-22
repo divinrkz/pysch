@@ -9,4 +9,12 @@ record = {
     'status': EStatus.ACTIVE
 }
 
-instance = collection.insert(record)
+instance = collection.insert(record)]
+
+class Job:
+    def __str__(self):
+        col = collection
+
+    def update_token(self, id: str):
+        if id is None:
+
