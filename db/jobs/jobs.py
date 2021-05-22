@@ -2,6 +2,7 @@ from db.models.mongo import db
 import datetime
 from db.models.enum import EStatus
 from db.utils.utility import Utility
+from bson.objectid import ObjectId
 
 
 record = {
@@ -13,14 +14,15 @@ record = {
 
 class Jobs:
     @staticmethod
-    def update_instance(_collection: str, _prop: str, _val: str, _dict: dict):
+    def update_instance(_collection: str, _id: str, _dict: dict):
         print('called')
         collection = db[_collection]
         # TODO: Custom Exception
         if id is None:
             raise Exception("Exception Found")
 
-        instance = collection.find_one({_prop: _val})
+        instance = collection.find_one({'_id': ObjectId(_id)})
+
         if instance is None:
             raise Exception('Record not found')
 
