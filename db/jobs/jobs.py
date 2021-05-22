@@ -20,5 +20,7 @@ class Jobs:
         if id is None:
             raise Exception("Exception Found")
 
-        collection.update({'_id': _prop}, {'$set': {'token': 'This was changed'}})
+        instance = collection.find_one({_prop: _val})
+        print(instance)
+        # collection.update({'_id': _prop}, {'$set': {'token': 'This was changed'}})
 
