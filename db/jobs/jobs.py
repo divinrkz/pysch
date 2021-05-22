@@ -21,6 +21,9 @@ class Jobs:
             raise Exception("Exception Found")
 
         instance = collection.find_one({_prop: _val})
+        if instance is None:
+            raise Exception('Record not found')
+
         print(instance)
         # collection.update({'_id': _prop}, {'$set': {'token': 'This was changed'}})
 
