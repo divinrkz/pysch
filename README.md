@@ -1,6 +1,6 @@
 # PYTHON SUCCOTASH
 
-Simple python automation and scheduling code.
+Python automation and scheduling testing with scheduler.
 
 
 ## Setup
