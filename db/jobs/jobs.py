@@ -1,7 +1,7 @@
-from db.mongo import db
+from db.models.mongo import db
 import datetime
-from db.enum import EStatus
-from db.utils.util import Utility
+from db.models.enum import EStatus
+from db.utils.utility import Utility
 
 
 record = {
@@ -13,10 +13,12 @@ record = {
 
 class Jobs:
     @staticmethod
-    def update_token(self, id: str):
-        collection = db['tokens']
+    def update_instance(_collection: str, _prop: str, _val: str, _dict: dict):
+        print('called')
+        collection = db[_collection]
         # TODO: Custom Exception
         if id is None:
-            raise Exception("Id was not given")
+            raise Exception("Exception Found")
 
-        collection.update({'_id': id}, {'$set': {'token': 'This was changed'}})
+        collection.update({'_id': _prop}, {'$set': {'token': 'This was changed'}})
+
