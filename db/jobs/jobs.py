@@ -15,7 +15,6 @@ record = {
 class Jobs:
     @staticmethod
     def update_instance(_collection: str, _id: str, _dict: dict):
-        print('called')
         collection = db[_collection]
         # TODO: Custom Exception
         if id is None:
@@ -26,6 +25,6 @@ class Jobs:
         if instance is None:
             raise Exception('Record not found')
 
-        print(instance)
-        # collection.update({'_id': _prop}, {'$set': {'token': 'This was changed'}})
+        collection.update_one({'_id': ObjectId(_id)}, {'$set': _dict})
+
 
