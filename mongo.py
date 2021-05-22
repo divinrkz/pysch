@@ -7,8 +7,8 @@ succotash_db = client['succotash_db']
 tokens_collection = succotash_db['tokens']
 
 
-rec = {
-    title: 'MongoDB and Python',
+instance = {
+    token: 'MongoDB and Python',
     description: 'MongoDB is no SQL database',
     tags: ['mongodb', 'database', 'NoSQL'],
     viewers: 104
