@@ -15,9 +15,8 @@ class Schedule:
             time.sleep(1)
 
     def fn(self):
-        self.job(self.args['_collection'], self.args['_id'], self.args['_dict'])
+        self.job(self.args['_name'], self.args['_collection'], self.args['_id'], self.args['_dict'])
 
     def scheduler(self, job):
-        schedule.every(10).seconds.do(job)
-        # schedule.every().day.at("10:30").do(job)
+        schedule.every().day.at("00:00").do(job)
         self.start()

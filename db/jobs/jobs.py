@@ -3,8 +3,8 @@ from bson.objectid import ObjectId
 
 
 class Jobs:
-    @staticmethod
-    def update_instance(_collection: str, _id: str, _dict: dict):
+    @classmethod
+    def update_instance(cls, _name, _collection: str, _id: str, _dict: dict):
         collection = db[_collection]
         # TODO: Custom Exception
         if id is None:
@@ -16,5 +16,7 @@ class Jobs:
             raise Exception('Record not found')
 
         collection.update_one({'_id': ObjectId(_id)}, {'$set': _dict})
+        # TODO: Console styling
+        print('Running job ' + _name)
 
 
