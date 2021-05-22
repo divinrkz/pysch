@@ -1,6 +1,7 @@
 from random import randint
 
-class Util:
+
+class Utility:
     @staticmethod
     def gen_code(n=12):
         code = "T-"

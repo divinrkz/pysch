@@ -1,14 +1,12 @@
 from .mongo import collection
 import datetime
 from .enum import EStatus
-from .util import Util
+from .util import Utility
 
 record = {
-    'token': Util.gen_code(),
+    'token': Utility.gen_code(),
     'expiration_date': datetime.datetime.now() + datetime.timedelta(minutes=5),
     'status': EStatus.ACTIVE
 }
-
-print(record)
 
 instance = collection.insert(record)
