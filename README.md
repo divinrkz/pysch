@@ -1,6 +1,6 @@
-# PYTHON SUCCOTASH
+# PYSCH
 
-A Python automation and scheduling implementation with scheduler.
+A tool for automating boring tasks and scheduling function calls. Built on top of ```scheduler```.
 
 
 ## Setup
